@@ -1,53 +1,52 @@
-# SauceDemo Automation
+# SauceDemo E2E Automation – Playwright Python + PyTest | POM Framework
 
-Simple Playwright + Pytest automation framework for [SauceDemo](https://www.saucedemo.com) using the Page Object Model.
+Automated end-to-end testing for **SauceDemo** e-commerce demo – built with Playwright Python (Sync API) + PyTest + Page Object Model.
 
-## Tech stack
+> **Live Site:** https://www.saucedemo.com | **Author:** Mohsin Ishfaq – Senior QA Engineer
 
-- Python
-- pytest
-- Playwright (sync API)
-- pytest-html
+### 🟢 Execution Results
+- **6 Tests Automated | 6 Passed | 0 Failed**
+- **Framework:** POM + Fixtures + pytest-html Reports + Video Recording
 
-## Project structure
+---
 
-```
-saucedemo-automation/
-├── pages/                  # Page Object Model classes
-├── tests/                  # Test cases
-├── conftest.py             # Browser and page fixtures
-├── pytest.ini              # Pytest config and HTML report settings
-├── requirements.txt
-└── README.md
-```
+### 📁 Project Structure
+saucedemo-playwright-automation/
+├── pages/               # Page Object Model
+├── tests/               # Test Cases (6 tests)
+├── reports/             # HTML Reports
+├── Screenshots/         # Execution Proof
+├── Videos/              # Test Run Recording
+├── conftest.py
+├── pytest.ini
+└── requirements.txt
 
-## Setup
+### 🧪 Test Coverage – 6 Test Cases
 
-```bash
+| ID | Test |
+|----|------|
+| TC01 | Valid login with standard_user |
+| TC03 | Locked out user error |
+| TC09 | Add single item to cart (Backpack) |
+| TC11 | Remove item from products page |
+| TC15 | Checkout with missing first name |
+| TC17 | Complete happy path checkout |
+
+### 🛠️ Tech Stack
+- Python 3.11, Playwright Sync API, PyTest, pytest-html, Page Object Model
+
+### ⚙️ Setup & Run
 pip install -r requirements.txt
 playwright install
-```
+pytest -v --html=reports/report.html --self-contained-html --video=on
 
-## Run tests
+### 📸 Screenshots & Video Proof
+Check /Screenshots and /Videos folders
 
-```bash
-pytest -v --html=reports/report.html
-```
+### 🔑 Credentials
+- Valid: standard_user / secret_sauce
+- Locked: locked_out_user / secret_sauce
 
-The HTML report is generated at `reports/report.html`.
-
-## Test cases
-
-| ID   | Test                                      |
-|------|-------------------------------------------|
-| TC01 | Valid login with standard_user            |
-| TC03 | Locked out user error                     |
-| TC09 | Add single item to cart (Backpack)        |
-| TC11 | Remove item from products page            |
-| TC15 | Checkout with missing first name          |
-| TC17 | Complete happy path checkout              |
-
-## Credentials
-
-- Valid user: `standard_user` / `secret_sauce`
-- Locked out user: `locked_out_user` / `secret_sauce`
+### 👨‍💻 Author
+Mohsin Ishfaq - Senior QA Engineer | Manual, Automation, API, DB, Performance, Security
+GitHub: github.com/mohsin-ishfaq
